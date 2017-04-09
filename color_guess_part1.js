@@ -18,9 +18,6 @@ function do_game() {
                                 "\n\nWhat color am I thinking of?");
       guess_input = colors.indexOf(guess_input_text);
       guesses += 1;
-      if (guess_input = target) {
-        document.body.style.backgroundColor = guess_input_text;
-      }
       finished = check_guess();
   }
 }
@@ -47,5 +44,8 @@ function check_guess() {
         ".\n\nIt took you " + guesses +
         " guesses to get the number!" +
         "\n\nYou can see the color in the background");
+  if (guess_input = target) {
+          document.body.style.backgroundColor = guess_input_text;
     return true;
+  }
 }
