@@ -5,7 +5,6 @@
         var colors = ['blue', 'green', 'gray', 'pink', 'red', 'yellow', 'white', 'black']
         var target;
         var guess_input_text;
-        var guess_input;
         var finished = false;
         var guesses = 0;
 
@@ -23,8 +22,7 @@
                                         "\n\nWhat color am I thinking of?");
               alert(finished);
               guess_input = colors.indexOf(guess_input_text);
-              guesses += 1;
-              finished = Boolean(guess_input = target);
+              finished = (guess_input == target);
               alert(finished);
           }
         }
