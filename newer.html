@@ -25,10 +25,6 @@
               guesses += 1;
               finished = check_guess();
           }
-          confirm("Congratulations! You've guessed the color" +
-                ".\n\nIt took you " + guesses +
-                " guesses to get the number!" +
-                "\n\nYou can see the color in the background");
         }
 
         function check_guess() {
@@ -52,7 +48,16 @@
           document.body.style.backgroundColor = guess_input_text;
             return true;
         }
+        function finish_game() {
+          confirm("Congratulations! You've guessed the color" +
+                ".\n\nIt took you " + guesses +
+                " guesses to get the number!" +
+                "\n\nYou can see the color in the background");
+
+        }
     </script>
 </head>
-    <body onload=do_game()> </body>
+    <body onload=do_game()>
+      <p onload="finish_game()"> </p>
+    </body>
 </html>
