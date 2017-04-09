@@ -3,6 +3,7 @@
     <title>Color Guessing Game</title>
 </head>
     <body onload="do_game()">
+      <div>
         <script>
         var colors = ['blue', 'green', 'gray', 'pink', 'red', 'yellow', 'white', 'black']
         var target;
@@ -46,15 +47,14 @@
                   "Please try again.");
               return false;
           }
-          <div backgroundColor = guess_input_text>
-          //document.body.style.backgroundColor = guess_input_text;
+          document.div.style.backgroundColor = guess_input_text;
           alert("Congratulations! You've guessed the color" +
                 ".\n\nIt took you " + guesses +
                 " guesses to get the number!" +
                 "\n\nYou can see the color in the background");
             return true;
-          </div>
         }
         </script>
+      </div>
     </body>
 </html>
