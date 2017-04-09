@@ -1,3 +1,4 @@
+<!DOCTYPE HTML SYSTEM>
 <html>
 <head>
     <title>Color Guessing Game</title>
@@ -24,12 +25,13 @@
               guesses += 1;
               finished = check_guess();
           }
+          confirm("Congratulations! You've guessed the color" +
+                ".\n\nIt took you " + guesses +
+                " guesses to get the number!" +
+                "\n\nYou can see the color in the background");
         }
 
         function check_guess() {
-          if (guess_input == target) {
-            document.body.style.backgroundColor = guess_input_text;
-          }
           if ((guess_input < 0) || (guess_input > 7)) {
             alert("Sorry, I don't recongize your color.\n\n" +
                   "Please try again.");
@@ -47,10 +49,7 @@
                   "Please try again.");
               return false;
           }
-          confirm("Congratulations! You've guessed the color" +
-                ".\n\nIt took you " + guesses +
-                " guesses to get the number!" +
-                "\n\nYou can see the color in the background");
+          document.body.style.backgroundColor = guess_input_text;
             return true;
         }
     </script>
