@@ -46,11 +46,11 @@
                   "Please try again.");
               return false;
           }
+          document.body.style.backgroundColor = guess_input_text;
           congrats();
             return true;
         }
       function congrats() {
-        document.body.style.backgroundColor = guess_input_text;
         alert("Congratulations! You've guessed the color" +
               ".\n\nIt took you " + guesses +
               " guesses to get the number!" +
