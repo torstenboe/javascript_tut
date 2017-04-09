@@ -11,13 +11,12 @@ function do_game() {
   target = random_number_integer;
   colors = colors.sort();
   var showcolorsAsString = colors.join(', ');
-  alert(colors + "\n" + target + "\n" + "Target is color: " + colors[target]);
+  alert(colors + "\n" + "Target is color: " + colors[target]);
 
   while (!finished) {
       guess_input_text = prompt("I am thinking of these colors\n\n" + showcolorsAsString +
                                 "\n\nWhat color am I thinking of?");
       guess_input = colors.indexOf(guess_input_text);
-      alert(guess_input);
       guesses += 1;
       finished = check_guess();
   }
@@ -41,10 +40,10 @@ function check_guess() {
          "Please try again.");
            return false;
        }
-       document.body.style.backgroundColor = guess_input_text;
        alert("Congratulations! You've guessed the color" +
              ".\n\nIt took you " + guesses +
              " guesses to get the number!" +
              "\n\nYou can see the color in the background");
+       document.body.style.backgroundColor = guess_input_text;
        return true;
 }
