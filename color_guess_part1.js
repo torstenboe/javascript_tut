@@ -17,29 +17,30 @@ function do_game() {
                                 "\n\n What is your number?");
       guess_input = parseInt(guess_input_text);
       guesses += 1;
-      finished = check_guess();
-   }
+      alert(guesses);
+      // finished = check_guess();
+}
 
-function check_guess() {
-       if (isNaN(guess_input)) {
-           alert("You have not entered a number.\n\n" +
-                 "Please enter a number in the range 1 to 8.");
-           return false;
-       }
-       if ((guess_input < 1) || (guess_input > 8)) {
-           alert("Please enter an integer number in the range 1 to 8.");
-           return false;
-       }
-       if (guess_input > target) {
-           alert("Your number is too large!");
-           return false;
-       }
-       if (guess_input < target) {
-           alert("Your number is too small!");
-           return false;
-       }
-       alert("You got it! The number was " + target +
-             ".\n\nIt took you " + guesses +
-             " guesses to get the number!");
-       return true;
-   }
+//function check_guess() {
+//       if (isNaN(guess_input)) {
+//           alert("You have not entered a number.\n\n" +
+//                 "Please enter a number in the range 1 to 8.");
+//           return false;
+//       }
+//       if ((guess_input < 1) || (guess_input > 8)) {
+//           alert("Please enter an integer number in the range 1 to 8.");
+//           return false;
+//       }
+//       if (guess_input > target) {
+//           alert("Your number is too large!");
+//           return false;
+//       }
+//       if (guess_input < target) {
+//           alert("Your number is too small!");
+//           return false;
+//       }
+//       alert("You got it! The number was " + target +
+//             ".\n\nIt took you " + guesses +
+//             " guesses to get the number!");
+//       return true;
+//}
