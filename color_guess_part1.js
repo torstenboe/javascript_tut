@@ -10,12 +10,12 @@ function do_game() {
   var random_number_integer = Math.floor(random_number);
   target = random_number_integer;
   colors = colors.sort();
+  var showcolorsAsString = colors.join(', ');
   alert(colors + "\n" + target + "\n" + "Target is color: " + colors[target]);
 
   while (!finished) {
-      guess_input_text = prompt("I am thinking of these colors\n\n" + colors +
-                                "\n\n What is your number?");
-      //guess_input = parseInt(guess_input_text);
+      guess_input_text = prompt("I am thinking of these colors\n\n" + showcolorsAsString +
+                                "\n\n What color am I thinking of?");
       guess_input = colors.indexOf(guess_input_text);
       alert(guess_input);
       guesses += 1;
