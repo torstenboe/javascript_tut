@@ -24,11 +24,11 @@ function do_game() {
 }
 
 function check_guess() {
-       if (!colors.includes(guess_input_text) {
-           alert("Sorry, I don't recongize your color.\n\n" +
-                 "Please try again.");
-           return false;
-       }
+       //if (!colors.includes(guess_input_text) {
+        //   alert("Sorry, I don't recongize your color.\n\n" +
+          //       "Please try again.");
+           //return false;
+       //}
        if ((guess_input < 1) || (guess_input > 8)) {
          alert("Sorry, I don't recongize your color.\n\n" +
                "Please try again.");
