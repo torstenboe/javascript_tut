@@ -39,11 +39,11 @@
               }
               if (guess_input == target) {
                 document.body.style.backgroundColor = guess_input_text;
-                confirm("Congratulations! You've guessed the color" +
+                setTimeout(function() {
+                  confirm("Congratulations! You've guessed the color" +
                       ".\n\nIt took you " + guesses +
                       " guesses to get the number!" +
-                      "\n\nYou can see the color in the background");
-                body.reload();
+                      "\n\nYou can see the color in the background");}, 200);
                 finished = true;
               }
           }
