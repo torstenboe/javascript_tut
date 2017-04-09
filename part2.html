@@ -37,8 +37,10 @@
                       "Hint: your color is alphabetical lower than mine \n\n" +
                       "Please try again.");
               }
-              document.body.style.backgroundColor = guess_input_text;
-              finished = true;
+              if (guess_input == target) {
+                document.body.style.backgroundColor = guess_input_text;
+                finished = true;
+              }
           }
           finish_game();
         }
