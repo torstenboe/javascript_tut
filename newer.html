@@ -27,6 +27,9 @@
         }
 
         function check_guess() {
+          if (guess_input == target) {
+            document.body.style.backgroundColor = guess_input_text;
+          }
           if ((guess_input < 0) || (guess_input > 7)) {
             alert("Sorry, I don't recongize your color.\n\n" +
                   "Please try again.");
@@ -43,9 +46,6 @@
                   "Hint: your color is alphabetical lower than mine \n\n" +
                   "Please try again.");
               return false;
-          }
-          if (guess_input == target) {
-            document.body.style.backgroundColor = guess_input_text;
           }
           confirm("Congratulations! You've guessed the color" +
                 ".\n\nIt took you " + guesses +
