@@ -40,7 +40,9 @@ function check_guess() {
          "Please try again.");
            return false;
        }
-       document.body.style.backgroundColor = guess_input_text;
+       if (guess_input = target) {
+         document.body.style.backgroundColor = guess_input_text;
+       }
        alert("Congratulations! You've guessed the color" +
              ".\n\nIt took you " + guesses +
              " guesses to get the number!" +
