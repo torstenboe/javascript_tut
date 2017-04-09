@@ -1,9 +1,6 @@
 <html>
 <head>
     <title>Color Guessing Game</title>
-    <style>
-    HTML {background-color: white;}
-    </style>
     <script type="text/javascript">
         var colors = ['blue', 'green', 'gray', 'pink', 'red', 'yellow', 'white', 'black']
         var target;
@@ -47,8 +44,8 @@
                   "Please try again.");
               return false;
           }
-          document.body.style.backgroundColor = guess_input_text;
-          alert("Congratulations! You've guessed the color" +
+          alert(document.body.style.backgroundColor = guess_input_text
+            "Congratulations! You've guessed the color" +
                 ".\n\nIt took you " + guesses +
                 " guesses to get the number!" +
                 "\n\nYou can see the color in the background");
