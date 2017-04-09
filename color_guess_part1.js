@@ -41,8 +41,10 @@ function check_guess() {
          "Please try again.");
            return false;
        }
-       alert("You got it! The number was " + target +
+       document.body.style.backgroundColor = guess_input_text;
+       alert("Congratulations! You've guessed the color" +
              ".\n\nIt took you " + guesses +
-             " guesses to get the number!");
+             " guesses to get the number!" +
+             "\n\nYou can see the color in the background");
        return true;
 }
