@@ -19,6 +19,7 @@ function do_game() {
       guesses += 1;
       alert(guesses);
       // finished = check_guess();
+  }
 }
 
 //function check_guess() {
