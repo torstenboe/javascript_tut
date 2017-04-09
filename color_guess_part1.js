@@ -24,25 +24,20 @@ function do_game() {
 }
 
 function check_guess() {
-       //if (!colors.includes(guess_input_text) {
-        //   alert("Sorry, I don't recongize your color.\n\n" +
-          //       "Please try again.");
-           //return false;
-       //}
-       if ((guess_input < 1) || (guess_input > 8)) {
+       if ((guess_input < 0) || (guess_input > 7)) {
          alert("Sorry, I don't recongize your color.\n\n" +
                "Please try again.");
           return false;
        }
        if (guess_input > target) {
          alert("Sorry, your guess is not correct! \n\n" +
-         "Hint: your color is alphabetical higher than mine" +
+         "Hint: your color is alphabetical higher than mine\n\n" +
          "Please try again.");
            return false;
        }
        if (guess_input < target) {
          alert("Sorry, your guess is not correct! \n\n" +
-         "Hint: your color is alphabetical lower than mine" +
+         "Hint: your color is alphabetical lower than mine \n\n" +
          "Please try again.");
            return false;
        }
