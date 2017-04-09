@@ -1,6 +1,6 @@
-var color = ['Blue', 'Green', 'Gray', 'Pink', 'Red', 'Yellow', 'White', 'Black']
+var colors = ['Blue', 'Green', 'Gray', 'Pink', 'Red', 'Yellow', 'White', 'Black']
 
 
 function do_game() {
-  alert("test");
+  alert(colors);
 }
