@@ -40,10 +40,10 @@
               if (guess_input == target) {
                 document.body.style.backgroundColor = guess_input_text;
                 body.reload();
+                finish_game();
                 finished = true;
               }
           }
-          finish_game();
         }
 
         function finish_game() {
