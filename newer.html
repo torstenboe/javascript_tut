@@ -25,6 +25,7 @@
               guesses += 1;
               finished = check_guess();
           }
+          finish_game();
         }
 
         function check_guess() {
@@ -57,7 +58,5 @@
         }
     </script>
 </head>
-    <body onload=do_game()>
-      <p onload="finish_game()"> </p>
-    </body>
+    <body onload=do_game()> </body>
 </html>
