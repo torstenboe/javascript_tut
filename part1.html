@@ -16,14 +16,16 @@
           colors = colors.sort();
           var showcolorsAsString = colors.join(', ');
           alert("Target is color: " + colors[target] + "\n");
+          alert(finished);
 
           while (!finished) {
               guess_input_text = prompt("I am thinking of these colors\n\n" + showcolorsAsString +
                                         "\n\nWhat color am I thinking of?");
+              alert(finished);
               guess_input = colors.indexOf(guess_input_text);
               guesses += 1;
               finished = Boolean(guess_input = target);
-              alert(finished)
+              alert(finished);
           }
         }
     </script>
