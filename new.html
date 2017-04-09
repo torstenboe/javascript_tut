@@ -1,13 +1,8 @@
 <html>
 <head>
-    <style>
-    HTML {background-color: lightblue;}
-    </style>
     <title>Color Guessing Game</title>
 </head>
-    <body>
-      <p onload="do_game()">
-        <script>
+    <script>
         var colors = ['blue', 'green', 'gray', 'pink', 'red', 'yellow', 'white', 'black']
         var target;
         var guess_input_text;
@@ -57,7 +52,6 @@
                 "\n\nYou can see the color in the background");
             return true;
         }
-        </script>
-      </p>
-    </body>
+    </script>
+    <body onload="do_game()"> </body>
 </html>
