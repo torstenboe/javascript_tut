@@ -13,7 +13,7 @@
         var finished = false;
         var guesses = 0;
 
-        function do_game() {
+        window.onload = function do_game() {
           var random_number = Math.random() * 8;
           var random_number_integer = Math.floor(random_number);
           target = random_number_integer;
@@ -56,5 +56,5 @@
             return true;
         }
     </script>
-    <body onload="do_game()"> </body>
+    <body> ... </body>
 </html>
