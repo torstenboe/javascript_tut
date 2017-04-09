@@ -23,9 +23,6 @@ function do_game() {
 }
 
 function check_guess() {
-  if (guess_input = target) {
-    document.body.style.backgroundColor = guess_input_text;
-  }
   if ((guess_input < 0) || (guess_input > 7)) {
     alert("Sorry, I don't recongize your color.\n\n" +
           "Please try again.");
@@ -41,11 +38,14 @@ function check_guess() {
     alert("Sorry, your guess is not correct! \n\n" +
           "Hint: your color is alphabetical lower than mine \n\n" +
           "Please try again.");
-           return false;
+      return false;
   }
-  alert("Congratulations! You've guessed the color" +
-        ".\n\nIt took you " + guesses +
-        " guesses to get the number!" +
-        "\n\nYou can see the color in the background");
+  if (guess_input = target) {
+    document.body.style.backgroundColor = guess_input_text;
+    alert("Congratulations! You've guessed the color" +
+          ".\n\nIt took you " + guesses +
+          " guesses to get the number!" +
+          "\n\nYou can see the color in the background");
+  }
     return true;
 }
