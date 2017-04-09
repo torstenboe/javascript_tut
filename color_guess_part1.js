@@ -15,9 +15,10 @@ function do_game() {
   while (!finished) {
       guess_input_text = prompt("I am thinking of these colors\n\n" + colors +
                                 "\n\n What is your number?");
-      guess_input = parseInt(guess_input_text);
+      //guess_input = parseInt(guess_input_text);
+      guess_input = colors.indexOf(guess_input_text);
+      alert(guess_input);
       guesses += 1;
-      alert(guesses);
       finished = check_guess();
   }
 }
