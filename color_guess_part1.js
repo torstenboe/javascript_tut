@@ -1,4 +1,4 @@
-var colors = ['Blue', 'Green', 'Gray', 'Pink', 'Red', 'Yellow', 'White', 'Black']
+var colors = ['blue', 'green', 'gray', 'pink', 'red', 'yellow', 'white', 'black']
 var target;
 var guess_input_text;
 var guess_input;
@@ -15,7 +15,7 @@ function do_game() {
 
   while (!finished) {
       guess_input_text = prompt("I am thinking of these colors\n\n" + showcolorsAsString +
-                                "\n\n What color am I thinking of?");
+                                "\n\nWhat color am I thinking of?");
       guess_input = colors.indexOf(guess_input_text);
       alert(guess_input);
       guesses += 1;
@@ -24,21 +24,27 @@ function do_game() {
 }
 
 function check_guess() {
-       if (isNaN(guess_input)) {
-           alert("You have not entered a number.\n\n" +
-                 "Please enter a number in the range 1 to 8.");
+       if (!colors.includes(guess_input_text) {
+           alert("Sorry, I don't recongize your color.\n\n" +
+                 "Please try again.");
            return false;
        }
-       if ((guess_input < 1) || (guess_input > 8)) {
-           alert("Please enter an integer number in the range 1 to 8.");
-           return false;
-       }
+       //if ((guess_input < 1) || (guess_input > 8)) {
+       //    alert("Sorry, your guess is not correct! \n\n" +
+       //    "Hint: your color is alphabetical higher than mine" +
+       //    "Please try again.");
+       //   return false;
+       //}
        if (guess_input > target) {
-           alert("Your number is too large!");
+         alert("Sorry, your guess is not correct! \n\n" +
+         "Hint: your color is alphabetical higher than mine" +
+         "Please try again.");
            return false;
        }
        if (guess_input < target) {
-           alert("Your number is too small!");
+         alert("Sorry, your guess is not correct! \n\n" +
+         "Hint: your color is alphabetical lower than mine" +
+         "Please try again.");
            return false;
        }
        alert("You got it! The number was " + target +
