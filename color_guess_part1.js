@@ -29,12 +29,11 @@ function check_guess() {
                  "Please try again.");
            return false;
        }
-       //if ((guess_input < 1) || (guess_input > 8)) {
-       //    alert("Sorry, your guess is not correct! \n\n" +
-       //    "Hint: your color is alphabetical higher than mine" +
-       //    "Please try again.");
-       //   return false;
-       //}
+       if ((guess_input < 1) || (guess_input > 8)) {
+         alert("Sorry, I don't recongize your color.\n\n" +
+               "Please try again.");
+          return false;
+       }
        if (guess_input > target) {
          alert("Sorry, your guess is not correct! \n\n" +
          "Hint: your color is alphabetical higher than mine" +
