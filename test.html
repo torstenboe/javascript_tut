@@ -1,25 +1,15 @@
 <!doctype html>
 <html>
-  <head>
-    <script>
-      function do_something() {
-        var theBody = document.getElementsByTagName("body")[0];
-        var theImg = document.createElement("img");
-        theImg.src = "cat.png";
-        theBody.appendChild(theImg.cloneNode(true));
-        var count = 0;
-        for (var i = 0; i < 10; i++, count++) {
-            if (i == 5) continue;
-            if (count == 3) {
-                count = 0;
-                theBody.removeChild(theBody.lastChild);
-            } else {
+    <head>
+        <script>
+            function do_something() {
+                var theBody = document.getElementById("theBody");
+                var theImg = document.getElementsByTagName("img")[0];
                 theBody.appendChild(theImg.cloneNode(true));
+                theBody.appendChild(theImg.cloneNode(true));
+                theBody.removeChild(theBody.lastChild);
             }
-            if (i > 7) break;
-        }
-      }
-    </script>
-  </head>
-  <body onload="do_something()"></body>
+        </script>
+    </head>
+    <body id="theBody" onload="do_something()"><img src="cat.png"></body>
 </html>
