@@ -1,10 +1,13 @@
 <!doctype html>
 <html>
-<body>
-    <script>
-        var pets = ["Dog", "Cat", "Rabbit", "Hamster"];
-        var result = pets.sort().reverse().splice(1, 1, "Fish");
-        alert(pets.join(", "));
-    </script>
-</body>
+    <head>
+        <script>
+            function do_something() {
+                var theBody = document.getElementById("theBody");
+                var theImg = document.getElementsByTagName("img")[0];
+                theBody.appendChild(theImg.cloneNode(true));
+            }
+        </script>
+    </head>
+    <body id="theBody" onload="do_something()"><img src="cat.png"></body>
 </html>
