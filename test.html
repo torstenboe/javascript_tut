@@ -4,7 +4,10 @@
         <script>
             function do_something() {
                 var theBody = document.getElementById("theBody");
-                theBody.removeChild(theBody.firstChild);
+                var theImg = document.getElementsByTagName("img")[0];
+                theBody.appendChild(theImg.cloneNode(true));
+                theBody.appendChild(theImg.cloneNode(true));
+                theBody.removeChild(theBody.lastChild);
             }
         </script>
     </head>
