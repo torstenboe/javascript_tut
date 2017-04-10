@@ -1,14 +1,17 @@
 <!doctype html>
 <html>
-    <head>
-        <script>
-            function do_something() {
-                var theBody = document.getElementById("theBody");
-                var theImg = document.createElement("img");
-                theImg.src = "cat.png";
-                theBody.appendChild(theImg);
-            }
-        </script>
-    </head>
-    <body id="theBody" onload="do_something()"></body>
+<body>
+    <script>
+        function a() {
+            alert("A!");
+        }
+
+        function b() {
+            clearInterval(timer1);
+        }
+
+        var timer1 = setInterval(a, 5000);
+        var timer2 = setTimeout(b, 2000);
+    </script>
+</body>
 </html>
