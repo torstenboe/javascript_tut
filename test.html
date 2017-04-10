@@ -4,11 +4,11 @@
         <script>
             function do_something() {
                 var theBody = document.getElementById("theBody");
-                var theImg = document.getElementsByTagName("img")[0];
-                theBody.appendChild(theImg.cloneNode(true));
-                theBody.removeChild(theBody.lastChild);
+                var theImg = document.createElement("img");
+                theImg.src = "cat.png";
+                theBody.appendChild(theImg);
             }
         </script>
     </head>
-    <body id="theBody" onload="do_something()"><img src="cat.png"></body>
+    <body id="theBody" onload="do_something()"></body>
 </html>
